@@ -79,6 +79,16 @@ function Example() {
 						item="child-3"
 						title="Nested Category"
 					/>
+					<NavigationItem
+						navigateToMenu="custom-back"
+						item="child-4"
+						title="Custom back"
+					/>
+					<NavigationItem
+						navigateToMenu="automatic-back"
+						item="child-5"
+						title="Automatic back"
+					/>
 				</NavigationMenu>
 
 				<NavigationMenu
@@ -89,6 +99,25 @@ function Example() {
 				>
 					<NavigationItem item="sub-child-1" title="Sub Child 1" />
 					<NavigationItem item="sub-child-2" title="Sub Child 2" />
+				</NavigationMenu>
+
+				<NavigationMenu
+					backButtonLabel="Custom back"
+					menu="custom-back"
+					parentMenu="category"
+					title="Custom backButtonLabel"
+				>
+					<NavigationItem item="sub-2-child-1" title="Sub Child 1" />
+					<NavigationItem item="sub-2-child-2" title="Sub Child 2" />
+				</NavigationMenu>
+
+				<NavigationMenu
+					menu="automatic-back"
+					parentMenu="category"
+					title="Automatic backButtonLabel"
+				>
+					<NavigationItem item="sub-3-child-1" title="Sub Child 1" />
+					<NavigationItem item="sub-3-child-2" title="Sub Child 2" />
 				</NavigationMenu>
 			</Navigation>
 
