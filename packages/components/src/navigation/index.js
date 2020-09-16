@@ -32,11 +32,21 @@ export default function Navigation( {
 	const navigationTree = useCreateNavigationTree();
 
 	const setActiveItem = ( itemId ) => {
+		const itemExists = !! navigationTree.getItem( itemId );
+		if ( ! itemExists ) {
+			return;
+		}
+
 		setItem( itemId );
 		onActivateItem( itemId );
 	};
 
 	const setActiveMenu = ( menuId, slideInOrigin = 'left' ) => {
+		const menuExists = !! navigationTree.getMenu( menuId );
+		if ( ! menuExists ) {
+			return;
+		}
+
 		setSlideOrigin( slideInOrigin );
 		setMenu( menuId );
 		onActivateMenu( menuId );
