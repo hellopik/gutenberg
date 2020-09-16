@@ -20,7 +20,7 @@ Get the rectangle for the selection in a container.
 
 _Parameters_
 
--   _window_ `Window`: The window of the selection.
+-   _win_ `Window`: The window of the selection.
 
 _Returns_
 

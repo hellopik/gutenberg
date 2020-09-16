@@ -249,12 +249,12 @@ export function getRectangleFromRange( range ) {
 /**
  * Get the rectangle for the selection in a container.
  *
- * @param {Window} window The window of the selection.
+ * @param {Window} win The window of the selection.
  *
  * @return {?DOMRect} The rectangle.
  */
-export function computeCaretRect( window ) {
-	const selection = window.getSelection();
+export function computeCaretRect( win ) {
+	const selection = win.getSelection();
 	const range = selection.rangeCount ? selection.getRangeAt( 0 ) : null;
 
 	if ( ! range ) {

@@ -6,7 +6,7 @@ import { RuleTester } from 'eslint';
 /**
  * Internal dependencies
  */
-import rule from '../no-global-active-element';
+import rule from '../no-global-get-selection';
 
 const ruleTester = new RuleTester( {
 	parserOptions: {
@@ -14,16 +14,16 @@ const ruleTester = new RuleTester( {
 	},
 } );
 
-ruleTester.run( 'no-global-active-element', rule, {
+ruleTester.run( 'no-global-get-selection', rule, {
 	valid: [
 		{
-			code: 'ownerDocument.activeElement;',
+			code: 'defaultView.getSelection();',
 		},
 	],
 	invalid: [
 		{
-			code: 'document.activeElement;',
-			errors: [ { message: 'Avoid global active element' } ],
+			code: 'window.getSelection();',
+			errors: [ { message: 'Avoid global selection getting' } ],
 		},
 	],
 } );
